@@ -10,7 +10,7 @@ TextUtil is a web application designed to provide various text utilities for use
 
 ## Usage
 
-Visit the app to start using the text utilities: [Visit the iTextUtils App](https://i-text-util-faioo0dhp-ayushs-projects-f4036635.vercel.app)
+Visit the app to start using the text utilities: [Visit the iTextUtils App](https://i-text-util.vercel.app/)
 
 ## Installation
 
