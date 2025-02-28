@@ -36,6 +36,19 @@ export default function TextForm(props) {
         setText(newText.join(" "));
         props.showAlert("Extra spaces removed!", "success");
     }
+    const handleDeleteSelected = () => {
+        const textarea = document.getElementById('myBox');
+        const start = textarea.selectionStart;
+        const end = textarea.selectionEnd;
+        
+        if (start !== end) {
+            let newText = text.substring(0, start) + text.substring(end);
+            setText(newText);
+            props.showAlert("Selected text deleted!", "success");
+        } else {
+            props.showAlert("No text selected!", "danger");
+        }
+    }
 
     const [text, setText] = useState(''); 
     // text = "new text"; // Wrong way to change the state
@@ -52,6 +65,7 @@ export default function TextForm(props) {
             <button disabled={text.length===0} className="btn btn-danger mx-1 my-1" onClick={handleClearClick}>Clear Text</button>
             <button disabled={text.length===0} className="btn btn-success mx-1 my-1" onClick={handleCopy}>Copy Text</button>
             <button disabled={text.length===0} className="btn btn-info mx-1 my-1" onClick={handleExtraSpaces}>Remove Extra Spaces</button>
+            <button disabled={text.length===0} className="btn btn-info mx-1 my-1" onClick={handleDeleteSelected}>Remove Selected Text</button>
         </div>
         <div className="container my-3" style={{color: props.mode==='dark'?'white':'#042743'}}>
             <h2>Your text summary</h2>
