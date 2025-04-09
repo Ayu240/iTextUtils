@@ -1,6 +1,6 @@
 # TextUtil App
 
-TextUtil is a web application designed to provide various text utilities for users, such as text transformation, formatting, and analysis. The app is built using JavaScript and HTML.
+TextUtil is a web application designed to provide various text utilities for users, such as text transformation, formatting, and analysis. The app is built using JavaScript and React.
 
 ## Features
 
